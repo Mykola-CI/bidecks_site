@@ -4,7 +4,10 @@ document.querySelectorAll('.store-link[href=""]').forEach((link) => {
 
 const sections = document.querySelectorAll(".section-pad, .legal-section");
 
-if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+if (
+	"IntersectionObserver" in window &&
+	!window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
 	sections.forEach((section) => section.classList.add("reveal"));
 
 	const observer = new IntersectionObserver(
@@ -16,7 +19,7 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
 				}
 			});
 		},
-		{ threshold: 0.08 }
+		{ threshold: 0.08 },
 	);
 
 	sections.forEach((section) => observer.observe(section));
