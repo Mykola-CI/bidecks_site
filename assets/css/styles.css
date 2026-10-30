@@ -203,8 +203,143 @@ a {
 	padding: 112px 0;
 }
 
-.about-section {
+.showcase-section,
+.features-section {
 	background: var(--bg-surface);
+}
+
+.showcase-group + .showcase-group {
+	margin-top: 48px;
+}
+
+.showcase-label {
+	margin: 0 0 20px;
+	color: var(--text-secondary);
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.showcase-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.showcase-grid img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--border);
+	border-radius: 12px;
+}
+
+.showcase-preview {
+	display: block;
+	min-width: 0;
+	border-radius: 12px;
+	cursor: zoom-in;
+}
+
+.showcase-preview:focus-visible,
+.kaleidoscope-control:focus-visible,
+.kaleidoscope-stage:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+}
+
+html:has(.kaleidoscope[open]) {
+	overflow: hidden;
+}
+
+.kaleidoscope {
+	width: min(96vw, 1000px);
+	max-width: none;
+	height: 92svh;
+	max-height: 92svh;
+	margin: auto;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid var(--border);
+	border-radius: 16px;
+	background: var(--bg-base);
+	color: var(--text);
+	box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+.kaleidoscope[open] {
+	display: flex;
+	flex-direction: column;
+}
+
+.kaleidoscope::backdrop {
+	background: rgba(0, 0, 0, 0.85);
+	backdrop-filter: blur(8px);
+}
+
+.kaleidoscope-header,
+.kaleidoscope-footer {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px;
+	background: var(--bg-surface);
+}
+
+.kaleidoscope-header h2 {
+	font-size: clamp(1rem, 3vw, 1.4rem);
+	line-height: 1.3;
+}
+
+.kaleidoscope-control {
+	flex-shrink: 0;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border: 1px solid var(--border);
+	border-radius: 50%;
+	background: var(--bg-elevated);
+	color: var(--text);
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.kaleidoscope-control:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+.kaleidoscope-stage {
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.kaleidoscope-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.kaleidoscope-caption {
+	text-align: center;
+}
+
+.kaleidoscope-status {
+	margin: 0;
+	font-size: 0.9rem;
+}
+
+.kaleidoscope-caption small {
+	color: var(--text-secondary);
+	font-size: 0.75rem;
+}
+
+.about-section,
+.contact-section {
+	background: var(--bg-base);
 }
 
 .section-kicker {
@@ -230,10 +365,6 @@ h2 {
 	color: var(--text-secondary);
 	font-size: clamp(1.1rem, 2vw, 1.35rem);
 	line-height: 1.6;
-}
-
-.features-section {
-	background: var(--bg-base);
 }
 
 .section-heading {
@@ -284,10 +415,6 @@ h2 {
 	line-height: 1.55;
 }
 
-.contact-section {
-	background: var(--bg-elevated);
-}
-
 .contact-section h2 {
 	font-size: clamp(2.1rem, 4vw, 3.8rem);
 }
@@ -335,6 +462,10 @@ h2 {
 
 .site-footer p {
 	margin: 0;
+}
+
+#main-content + .site-footer {
+	background: var(--bg-surface);
 }
 
 .footer-links {
@@ -456,9 +587,17 @@ h2 {
 	.section-pad {
 		padding: 84px 0;
 	}
+
+	.showcase-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
 }
 
 @media (max-width: 575.98px) {
+	.showcase-grid {
+		grid-template-columns: minmax(0, 1fr);
+	}
+
 	.brand-shimmer {
 		font-size: clamp(4.3rem, 24vw, 7rem);
 	}
