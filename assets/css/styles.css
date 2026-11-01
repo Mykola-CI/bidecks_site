@@ -225,7 +225,14 @@ a {
 	gap: 24px;
 }
 
-.showcase-grid img {
+.showcase-grid-tablets {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 24px;
+}
+
+.showcase-grid img,
+.showcase-grid-tablets img {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -591,11 +598,17 @@ h2 {
 	.showcase-grid {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
+	.showcase-grid-tablets {
+		grid-template-columns: minmax(0, 1fr);
+		padding-inline: clamp(16px, 15vw, 150px);
+	}
 }
 
 @media (max-width: 575.98px) {
-	.showcase-grid {
+	.showcase-grid,
+	.showcase-grid-tablets {
 		grid-template-columns: minmax(0, 1fr);
+		padding-inline: 0;
 	}
 
 	.brand-shimmer {

@@ -24,7 +24,7 @@ if (kaleidoscope) {
 		previewImage.src = image.src;
 	}
 
-	document.querySelectorAll(".showcase-grid").forEach((grid) => {
+	document.querySelectorAll(".showcase-grid, .showcase-grid-tablets").forEach((grid) => {
 		const links = [...grid.querySelectorAll(".showcase-preview")];
 		const group = grid.closest(".showcase-group");
 		const label = group.querySelector(".showcase-label").textContent;
