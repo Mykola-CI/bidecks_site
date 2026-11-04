@@ -111,7 +111,7 @@ A Vault backup includes both relational data and filesystem assets, so replacing
 
 [App Store][app-store] | [Google Play][google-play]
 
-[app-store]: https://apps.apple.com/app/idREPLACE_ME
-[google-play]: https://play.google.com/store/apps/details?id=REPLACE_ME
+[app-store]: https://apps.apple.com/app/
+[google-play]: https://play.google.com/store/apps/details?id=com.bidecks.mobile
 
 
