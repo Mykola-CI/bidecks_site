@@ -2,11 +2,27 @@
 
 **A local-first iOS and Android application for collecting, annotating, and retrieving online learning material.**
 
-> This repository contains the BiDecks website. The mobile application's source code is maintained in a separate, private repository. The overview below describes the mobile product and its engineering.
+> This repository contains the [BiDecks website](https://bidecks.com). The mobile application's source code is maintained in a separate, private repository. The overview below describes the mobile product and its engineering.
 
 ## What the app does
 
 BiDecks saves references to online material, including videos, articles, podcasts, and posts, together with the user's own context. Each saved item, called a **Deck**, combines a source link and available metadata with optional notes, a key takeaway, checklists, attachments, and timestamped moments. Users can organize Decks by subject or intended activity, track viewing and practical-use states separately, and retrieve material through search and filters. The working library, or **Vault**, is stored locally; original media remains with its provider rather than being downloaded into the app.
+
+## Screenshots
+
+<!-- Add the five images at these paths, or replace the paths and captions. -->
+
+### Phone
+
+| Capture a source | Annotate a Deck | Search and filter |
+| :---: | :---: | :---: |
+| ![Phone: source capture](assets/images/gallery/onboarding-screen3.png) | ![Phone: Deck details and personal context](assets/images/gallery/iPhone/2ndBiDecks.png) | ![Phone: search results and filters](assets/images/gallery/iPhone/3dBiDecks.png) |
+
+### Tablet
+
+| Browse the Vault | Work with saved material |
+| :---: | :---: |
+| ![Tablet: Vault browsing](assets/images/gallery/iPad/1stBidecks_Tablet.png) | ![Tablet: saved material and context](assets/images/gallery/iPad/2ndBidecks_Tablet.png) |
 
 ## Target users
 
@@ -98,18 +114,4 @@ A Vault backup includes both relational data and filesystem assets, so replacing
 [app-store]: https://apps.apple.com/app/idREPLACE_ME
 [google-play]: https://play.google.com/store/apps/details?id=REPLACE_ME
 
-## Screenshots
 
-<!-- Add the five images at these paths, or replace the paths and captions. -->
-
-### Phone
-
-| Capture a source | Annotate a Deck | Search and filter |
-| :---: | :---: | :---: |
-| ![Phone: source capture](docs/screenshots/phone-01.png) | ![Phone: Deck details and personal context](docs/screenshots/phone-02.png) | ![Phone: search results and filters](docs/screenshots/phone-03.png) |
-
-### Tablet
-
-| Browse the Vault | Work with saved material |
-| :---: | :---: |
-| ![Tablet: Vault browsing](docs/screenshots/tablet-01.png) | ![Tablet: saved material and context](docs/screenshots/tablet-02.png) |
